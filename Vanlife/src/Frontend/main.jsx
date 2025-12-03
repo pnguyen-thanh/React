@@ -5,6 +5,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Layout } from './components/Layout'
 import { Home } from './pages/Main/Home'
 import { About } from './pages/Main/About'
+import { Vans } from './pages/Vans/Vans'
+import { VanDetails } from './pages/Vans/VanDetails'
+
 
 const routesArray = [
   {
@@ -12,7 +15,9 @@ const routesArray = [
     element: <Layout />,
     children: [
       {index: true, element: <Home />},
-      {path: 'about', element: <About />}
+      {path: 'about', element: <About />},
+      {path: 'vans', element: <Vans />},
+      {path: 'vans/:id', element: <VanDetails />}
     ]
   }
 ]
